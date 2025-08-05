@@ -3,7 +3,7 @@
 
 int main() {
     char state1;
-    int code1;
+    char code1[4];
     char name1[50];
     unsigned long int population1;
     float area1;
@@ -14,7 +14,7 @@ int main() {
     long double superPower1;
     
     char state2;
-    int code2;
+    char code2[4];
     char name2[50];
     unsigned long int population2;
     float area2;
@@ -31,7 +31,7 @@ int main() {
     scanf(" %c", &state1);
     
     printf("Digite o código da cidade: \n");
-    scanf(" %d", &code1);
+    scanf(" %s", code1);
     
     printf("Digite o nome da cidade: \n");
     scanf(" %49[^\n]", name1);
@@ -60,7 +60,7 @@ int main() {
     scanf(" %c", &state2);
     
     printf("Digite o código da cidade: \n");
-    scanf(" %d", &code2);
+    scanf(" %s", code2);
     
     printf("Digite o nome da cidade: \n");
     scanf(" %49[^\n]", name2);
@@ -85,7 +85,7 @@ int main() {
     //Print cartas
     printf("Carta 1\n");
     printf("Estado: %c\n", state1);
-    printf("Código: %d\n", code1);
+    printf("Código: %s\n", code1);
     printf("Nome: %s\n", name1);
     printf("População: %lu\n", population1);
     printf("Área: %.2f km²\n", area1);
@@ -99,7 +99,7 @@ int main() {
     
     printf("Carta 2\n");
     printf("Estado: %c\n", state2);
-    printf("Código: %d\n", code2);
+    printf("Código: %s\n", code2);
     printf("Nome: %s\n", name2);
     printf("População: %lu\n", population2);
     printf("Área: %.2f km²\n", area2);
@@ -117,7 +117,7 @@ int main() {
     printf("Área: %d\n", area1 > area2);
     printf("PIB: %d\n", pib1 > pib2);
     printf("Pontos Turísticos: %d\n", touristSpots1 > touristSpots2);
-    printf("Densidade Populacional: %d\n", density1 > density2);
+    printf("Densidade Populacional: %d\n", density1 < density2);
     printf("PIB per Capita: %d\n", pibPerCapita1 > pibPerCapita2);
     printf("Super Poder: %d\n", superPower1 > superPower2);
 
