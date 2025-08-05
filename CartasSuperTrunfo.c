@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-float divisor(float value1,float value2) {
-
-  float result = value1 / value2;
-
-  return result;
-};
 
 int main() {
     char state1;
@@ -53,8 +47,8 @@ int main() {
     printf("Digite quantos pontos turísticos há: \n");
     scanf(" %d", &touristSpots1);
     
-     density1 = divisor(population1, area1);
-     pibPerCapita1 = divisor(pib1, population1);
+     density1 = population1 / area1;
+     pibPerCapita1 = pib1 / population1;
     
     
     // Entrada de dados da carta 2 
@@ -82,14 +76,14 @@ int main() {
     scanf(" %d", &touristSpots2);
      
   
-     density2 = divisor(population2, area2);
-     pibPerCapita2 = divisor(pib2, population2);
+     density2 = population2 / area2;
+     pibPerCapita2 = pib2 / population2;
 
    
     //Print cartas
     printf("Carta 1\n");
     printf("Estado: %c\n", state1);
-    printf("Código: %c0%d\n",state1, code1);
+    printf("Código: %d\n", code1);
     printf("Nome: %s\n", name1);
     printf("População: %d\n", population1);
     printf("Área: %.2fkm²\n", area1);
@@ -101,7 +95,7 @@ int main() {
     
     printf("Carta 2\n");
     printf("Estado: %c\n", state2);
-    printf("Código: %c0%d\n",state2, code2);
+    printf("Código: %d\n", code2);
     printf("Nome: %s\n", name2);
     printf("População: %d\n", population2);
     printf("Área: %.2fkm²\n", area2);
