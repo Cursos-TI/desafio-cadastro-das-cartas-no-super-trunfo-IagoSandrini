@@ -48,7 +48,7 @@ int main() {
     scanf(" %d", &touristSpots1);
     
      density1 = population1 / area1;
-     pibPerCapita1 = pib1 / population1;
+     pibPerCapita1 = (pib1 * 1000000000) / population1;
     
     
     // Entrada de dados da carta 2 
@@ -77,7 +77,7 @@ int main() {
      
   
      density2 = population2 / area2;
-     pibPerCapita2 = pib2 / population2;
+     pibPerCapita2 = (pib2 * 1000000000) / population2;
 
    
     //Print cartas
