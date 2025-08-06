@@ -2,7 +2,7 @@
 
 
 int main() {
-    char state1;
+    char state1[3];
     char code1[4];
     char name1[50];
     unsigned long int population1;
@@ -12,8 +12,7 @@ int main() {
     float density1;
     float pibPerCapita1;
     long double superPower1;
-    
-    char state2;
+    char state2[3];
     char code2[4];
     char name2[50];
     unsigned long int population2;
@@ -28,7 +27,7 @@ int main() {
     printf("Carta 1\n");
     
     printf("Digite a letra do estado: \n");
-    scanf(" %c", &state1);
+    scanf(" %s", state1);
     
     printf("Digite o código da cidade: \n");
     scanf(" %s", code1);
@@ -52,12 +51,11 @@ int main() {
     pibPerCapita1 = (pib1 *  1000000000) / population1;
     superPower1 = (long double) population1 + area1 + pib1 + touristSpots1 + pibPerCapita1 + (1 / density1);
     
-    
     //Entrada de dados da carta 2 
     printf("Carta 2\n");
     
     printf("Digite a letra do estado: \n");
-    scanf(" %c", &state2);
+    scanf(" %s", state2);
     
     printf("Digite o código da cidade: \n");
     scanf(" %s", code2);
@@ -77,14 +75,13 @@ int main() {
     printf("Digite quantos pontos turísticos há: \n");
     scanf(" %d", &touristSpots2);
 
-
     density2 = population2 / area2;
     pibPerCapita2 = (pib2 * 1000000000) / population2;
     superPower2 = (long double) population2 + area2 + pib2 + touristSpots2 + pibPerCapita2 + (2 / density2);
    
     //Print cartas
     printf("Carta 1\n");
-    printf("Estado: %c\n", state1);
+    printf("Estado: %s\n", state1);
     printf("Código: %s\n", code1);
     printf("Nome: %s\n", name1);
     printf("População: %lu\n", population1);
@@ -95,10 +92,8 @@ int main() {
     printf("PIB per capita:  %.2f\n", pibPerCapita1);
     printf("O SuperPoder é: %.2Lf\n", superPower1);
 
-  
-    
     printf("Carta 2\n");
-    printf("Estado: %c\n", state2);
+    printf("Estado: %s\n", state2);
     printf("Código: %s\n", code2);
     printf("Nome: %s\n", name2);
     printf("População: %lu\n", population2);
@@ -108,8 +103,6 @@ int main() {
     printf("Densidade Populacional:  %.2f hab/km²\n", density2);
     printf("PIB per capita:  %.2f\n", pibPerCapita2);
     printf("O SuperPoder é: %.2Lf\n", superPower2);
-
-
 
     //Print comparativos
     printf("Comparação: \n");
@@ -121,7 +114,14 @@ int main() {
     printf("PIB per Capita: %d\n", pibPerCapita1 > pibPerCapita2);
     printf("Super Poder: %d\n", superPower1 > superPower2);
 
+    printf("Carta 1 - %s: %lu\n", state1, population1);
+    printf("Carta 2 - %s: %lu\n", state2, population2);
     
-
+    if(population1 > population2) {
+       printf("Carta 1 %s venceu!\n", name1);
+    } else {
+        printf("Carta 2 %s venceu\n", name2);
+    };
+    
     return 0;
 }
